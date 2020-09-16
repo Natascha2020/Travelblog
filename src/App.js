@@ -5,6 +5,7 @@ import MyProfile from "./Components/MyProfile";
 import Rating from "./Components/Rating";
 import Sidebar from "react-sidebar";
 import SidebarContent from "./Components/SidebarContent";
+import ViewList from "./Components/ViewList";
 import "./App.css";
 
 const App = () => {
@@ -42,7 +43,7 @@ const App = () => {
 
         <Switch>
           <Route exact path="/images">
-            <Images />
+            <ViewList />
           </Route>
           <Route exact path="/MyProfile">
             <MyProfile />
