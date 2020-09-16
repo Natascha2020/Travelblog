@@ -1,0 +1,52 @@
+.navWrapper {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 0;
+  width: 256px;
+  height: 100%;
+}
+
+.divider {
+  margin: 10px 0;
+  height: 1;
+}
+
+.discover {
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 20px;
+  color: #a67c00;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.navItem {
+  font-size: 25px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.link:link {
+  display: block;
+  color: #cbaa49;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.link:visited {
+  display: block;
+  color: #cbaa49;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.link:hover {
+  display: block;
+  color: #cbaa49;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #000000;
+}

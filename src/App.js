@@ -1,40 +1,40 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Images from "./Components/Images";
 import MyProfile from "./Components/MyProfile";
 import Rating from "./Components/Rating";
+import Sidebar from "react-sidebar";
+import SidebarContent from "./Components/SidebarContent";
 import "./App.css";
 
 const App = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const onSetSidebarOpen = (open) => {
+    setSidebarOpen(open);
+  };
+
+  /* const onSetOpen = (open) => setOpen(true); */
+
+  const sidebarContent = <SidebarContent />;
+
   return (
     <Router>
       <div className="App">
-        <header className="App-header">
-          <nav className="navBar">
-            <ul className="navWrapper">
-              <li className="navItem">
-                <Link className="link" to="/">
-                  Home
-                </Link>
-              </li>
-              <li className="navItem">
-                <Link className="link" to="/Images">
-                  Images
-                </Link>
-              </li>
-              <li className="navItem">
-                <Link className="link" to="/MyProfile">
-                  My Profile
-                </Link>
-              </li>
-              <li className="navItem">
-                <Link className="link" to="/Rating">
-                  Rating
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
+        <header className="App-header"></header>
+
+        <Sidebar sidebar={sidebarContent} open={sidebarOpen} onSetOpen={onSetSidebarOpen}>
+          {/* <span className="menu">
+            <a onClick={() => onSetSidebarOpen(true)} href="#">
+              =
+            </a>
+          </span> */}
+          <span>
+            <button className="menu" onClick={() => onSetSidebarOpen(true)}>
+              =
+            </button>
+          </span>
+        </Sidebar>
 
         <main>
           <h1>Travelblog</h1>
