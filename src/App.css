@@ -1,32 +1,24 @@
+h1 {
+  margin-top: 3em;
+  color: #a67c00;
+  font-size: 50px;
+  text-shadow: 4px 4px 4px #000000;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
 .App {
   text-align: center;
 }
 
-.navWrapper {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.menu {
+  background-color: #a67c00;
+  padding: 1em 2em;
+  border-style: none;
   font-weight: bold;
-  height: 4em;
-  padding: 0;
-}
-
-.navItem {
-  font-size: 25px;
-}
-
-.link:link {
-  text-decoration: none;
-  color: darkcyan;
-}
-
-.link:visited {
-  text-decoration: none;
-  color: darkcyan;
-}
-
-.link:hover {
-  text-decoration: none;
-  color: darkcyan;
+  font-size: 22px;
 }
