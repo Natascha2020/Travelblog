@@ -1,5 +1,4 @@
 h1 {
-  margin-top: 3em;
   color: #a67c00;
   font-size: 50px;
   text-shadow: 4px 4px 4px #000000;
@@ -21,8 +20,20 @@ body {
   border-style: none;
   font-weight: bold;
   font-size: 22px;
+  display: flex;
+  flex-direction: flex-end;
+  margin-top: 2em;
+  margin-left: 2em;
 }
 
+<<<<<<< HEAD
+.menu:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+=======
+>>>>>>> 4f7ae71c151cac4aad3de52bb1559e6d7666b8fe
 .sidebar:before, body>.navbar-collapse:before {
   opacity: .33;
   background: #f00 !important;

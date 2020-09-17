@@ -7,9 +7,12 @@ body {
 .myProfile {
   background-color: rgb(245, 228, 153);
   font-family: "Ultra";
+  border: 1px solid #333;
+  border-radius: 5px;
   color: rgb(82, 42, 10);
   border-radius: 2px;
   width: 45%;
+  min-width: 300px;
   margin: 20px auto;
   padding: 20px;
   text-align: center;
@@ -77,4 +80,28 @@ body {
 .contact {
   font-style: italic;
   font-size: 20px;
+}
+
+.linkProfile {
+  font-style: italic;
+  text-decoration: none;
+  color: rgb(82, 42, 10);
+}
+
+.linkProfile:link {
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.linkProfile:visited {
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.linkProfile:hover {
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
 }
