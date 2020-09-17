@@ -5,7 +5,7 @@ import Rating from "./Components/Rating";
 import Sidebar from "react-sidebar";
 import SidebarContent from "./Components/SidebarContent";
 import ViewList from "./Components/ViewList";
-import Home from "./Home";
+import Home from "./Components/Home";
 import "./App.css";
 
 const App = () => {
