@@ -1,16 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import ErrorHandler from "./ErrorHandler";
+import * as settings from "./Settings";
 
-const contentfulSpaceID = "hyf1ooddn06y";
-const contentfulToken = "Bo3__PcF0P-icxz-t6a04_PoUyn72Gz7ywctg4SIRdE";
-const contentfulType = "post";
-
-let contentfulURL =
-  "https://cdn.contentful.com/spaces/[spaceid]/environments/master/entries?access_token=[token]&content_type=[type]";
-contentfulURL = contentfulURL.replace("[spaceid]", contentfulSpaceID);
-contentfulURL = contentfulURL.replace("[token]", contentfulToken);
-contentfulURL = contentfulURL.replace("[type]", contentfulType);
+let contentfulURL = settings.contentfulURL;
+contentfulURL = contentfulURL.replace("[spaceid]", settings.contentfulSpaceID);
+contentfulURL = contentfulURL.replace("[token]", settings.contentfulToken);
+contentfulURL = contentfulURL.replace("[type]", settings.contentfulType);
 console.log(contentfulURL);
 
 /* */
