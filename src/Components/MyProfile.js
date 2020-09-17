@@ -106,19 +106,3 @@ const MyProfile = () => {
 };
 
 export default MyProfile;
-
-//let itemData = transferItem.fields;
-
-/* let itemAssetID = user.phot? itemData.photo.sys.id : undefined;
-  let itemAssetData = extractURL(data.includes, itemAssetID);
-  let itemAssetURL = itemAssetData ? itemAssetData.url : undefined;
-  
-
-
-
-<div className="img-wrapper">
-        <img
-          src={itemAssetURL}
-          alt={itemAssetTitle}
-        />
-      </div> */
