@@ -26,6 +26,7 @@ body {
   margin-left: 2em;
 }
 
+
 .sidebar:before, body>.navbar-collapse:before {
   opacity: .33;
   background: #f00 !important;
