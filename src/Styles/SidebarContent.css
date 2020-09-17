@@ -1,3 +1,8 @@
+.travel-sidebar {
+  z-index:200;
+  background:rgba(0,0,0,0.5);
+}
+
 .navWrapper {
   list-style-type: none;
   display: flex;
