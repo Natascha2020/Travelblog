@@ -1,0 +1,15 @@
+.rating-cards .card {
+    display:block; 
+    margin:0 auto;
+    max-width:600px;
+    width:80%;
+    margin-bottom:20px;
+}
+
+.rating-cards .ranking {
+    font-size:2em;
+}
+
+.rating-cards h2 {
+    color:white;
+}

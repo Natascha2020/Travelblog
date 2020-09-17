@@ -3,7 +3,7 @@ import Stars from "./Stars";
 import "./../Styles/Card.css";
 
 const Card = (props) => {
-  const { transferItem, transferData, index } = props;
+  const { transferItem, transferData, index, showIndex } = props;
 
   const extractURL = (assetData, assetID) => {
     if (assetData && assetData.Asset) {
@@ -35,8 +35,10 @@ const Card = (props) => {
   let itemAssetURL = itemAssetData ? itemAssetData.url : undefined;
   let itemAssetTitle = itemAssetData ? itemAssetData.title : undefined;
 
+
   return (
     <div key={"item-" + index} className="card">
+      {showIndex?<div className="ranking">{"#"+(index+1)}</div>:null}
       <div className={continentClasses}>{itemContinent}</div>
       {{ itemCountry } ? <div className="country">{itemCountry}</div> : null}
       <div className="location">{itemLocation}</div>
