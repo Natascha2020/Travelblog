@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import ErrorHandler from "./ErrorHandler";
 import "./../Styles/MyProfile.css";
 
@@ -69,7 +70,11 @@ const MyProfile = () => {
         </div>
       ) : null}
       <hr className="hrProfile" />
-      {numberPosts ? <h3 className="postsProfile"> Records: {numberPosts}</h3> : null}
+      {numberPosts ? (
+        <Link className="linkProfile" to="/Images">
+          <h3 className="postsProfile"> Records: {numberPosts}</h3>{" "}
+        </Link>
+      ) : null}
       <div className="contact">Contact: #006 @WBS Coding School</div>
       {error ? <ErrorHandler errorMessage={error} /> : null}
     </div>

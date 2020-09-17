@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-around;
   padding: 0;
-  width: 256px;
+  width: 200px;
   height: 100%;
 }
 
@@ -16,9 +16,10 @@
 .discover {
   font-weight: bold;
   font-size: 30px;
-  margin-top: 20px;
+  margin-top: 150px;
   color: #a67c00;
   text-shadow: 2px 2px 4px #000000;
+  text-decoration: underline;
 }
 
 .navItem {
@@ -52,8 +53,4 @@
   text-decoration: none;
   font-weight: bold;
   text-shadow: 2px 2px 4px #000000;
-}
-
-.Icon {
-  margin-right: 10px;
 }
