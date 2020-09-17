@@ -14,7 +14,7 @@ const Stars = (props) => {
   const stars = [];
   // &#9733; is html entity for a filled star ★
   for (let i = 0; i < int_maxStars; i++) {
-    stars.push(<span className="star">&#9733;</span>);
+    stars.push(<span key={"star-"+i} className="star">&#9733;</span>);
   }
 
   return (

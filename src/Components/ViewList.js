@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
+import ErrorHandler from "./ErrorHandler";
 
 const contentfulSpaceID = "hyf1ooddn06y";
 const contentfulToken = "Bo3__PcF0P-icxz-t6a04_PoUyn72Gz7ywctg4SIRdE";
@@ -16,25 +17,42 @@ console.log(contentfulURL);
 const ViewList = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
+  const [searchURL, setSearchURL]=useState(contentfulURL);
+  const [searchField, setSearchField]=useState("");
+  
+  const handleChange=(e)=>{
+    setSearchField(e.target.value);
+  }
+  
+  const searchHandler=(e)=>{
+    e.preventDefault();
+    setSearchURL(contentfulURL + '&query=' + searchField);
+  }
 
-  const getListData = () => {
-    fetch(contentfulURL)
-      .then((response) => response.json())
-      .then((data) => {
-        setData(data);
-      })
-      .catch((errorMsg) => {
-        let errorOutput = `Error: ${errorMsg}`;
-        setError(errorOutput);
-      });
-  };
 
   useEffect(() => {
+    const getListData = () => {
+      fetch(searchURL)
+        .then((response) => response.json())
+        .then((data) => {
+          setData(data);
+        })
+        .catch((errorMsg) => {
+          let errorOutput = `Error: ${errorMsg}`;
+          setError(errorOutput);
+        });
+    };
     getListData();
-  }, []);
+  }, [searchURL]);
 
   return (
     <div className="container-images">
+      <div className="search">
+        <form onSubmit={(e) => searchHandler(e)}>
+        <input type="text" className="input-search" placeholder="Search" value={searchField} onChange={handleChange} />
+        <button className="btn-submit" type="submit">Search</button>
+        </form>
+      </div>
       <div className="cards">
         {/* Displaying current search - if no input value in search bar, displaying all pokemon*/}
         {data && data.items && data.includes
@@ -50,7 +68,7 @@ const ViewList = () => {
             })
           : null}
 
-        {/* {error ? <ErrorHandler errorMessage={error} /> : null} */}
+        {error ? <ErrorHandler errorMessage={error} /> : null}
       </div>
     </div>
   );

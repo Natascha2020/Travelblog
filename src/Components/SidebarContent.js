@@ -10,6 +10,11 @@ const SidebarContent = () => {
       <div className="divider"></div>
       <ul className="navWrapper">
         <li className="navItem">
+          <Link className="link" to="/">
+            Home
+          </Link>
+        </li>
+        <li className="navItem">
           <Link className="link" to="/Images">
             Images
           </Link>
