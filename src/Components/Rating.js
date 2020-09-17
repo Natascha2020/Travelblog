@@ -23,15 +23,17 @@ const Rating = () => {
 
   useEffect(() => {
     const getListData = () => {
-      fetch(searchURL)
-        .then((response) => response.json())
-        .then((data) => {
-          setData(data);
-        })
-        .catch((errorMsg) => {
-          let errorOutput = `Error: ${errorMsg}`;
-          setError(errorOutput);
-        });
+      if (searchURL!==""){
+        fetch(searchURL)
+          .then((response) => response.json())
+          .then((data) => {
+            setData(data);
+          })
+          .catch((errorMsg) => {
+            let errorOutput = `Error: ${errorMsg}`;
+            setError(errorOutput);
+          });
+      }
     };
     getListData();
   }, [searchURL]);
