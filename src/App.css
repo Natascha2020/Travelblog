@@ -26,14 +26,6 @@ body {
   margin-left: 2em;
 }
 
-<<<<<<< HEAD
-.menu:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-=======
->>>>>>> 4f7ae71c151cac4aad3de52bb1559e6d7666b8fe
 .sidebar:before, body>.navbar-collapse:before {
   opacity: .33;
   background: #f00 !important;
