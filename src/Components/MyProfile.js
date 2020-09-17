@@ -21,6 +21,7 @@ const MyProfile = () => {
   const [user, setUser] = useState({});
   const [numberPosts, setNumberPosts] = useState("");
   const [error, setError] = useState("");
+  const [data, setData] = useState("");
 
   // Fetching fields and there values for user (just one current user)
   useEffect(() => {
@@ -30,6 +31,7 @@ const MyProfile = () => {
       .then((rawData) => rawData.json())
       .then((response) => {
         console.log(response);
+        setData(response);
         setUser(response.items[0].fields);
         console.log(response.items[0].fields);
       })
@@ -54,19 +56,26 @@ const MyProfile = () => {
       });
   }, []);
 
-  useEffect(() => {
-    fetch(
-      "https://cdn.contentful.com//spaces/hyf1ooddn06y/environments/master/entries?access_token=Bo3__PcF0P-icxz-t6a04_PoUyn72Gz7ywctg4SIRdE&links_to_asset=41KcRu84TzLWiOTDK31yek"
-    )
-      .then((rawData) => rawData.json())
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((errorMsg) => {
-        let errorOutput = `Error: ${errorMsg}`;
-        setError(errorOutput);
+  const extractURL = (assetData, assetID) => {
+    if (assetData && assetData.Asset) {
+      let result = undefined;
+      assetData.Asset.forEach((element) => {
+        if (element.sys.id === assetID) {
+          result = {
+            url: element.fields.file.url,
+            title: element.fields.title,
+          };
+        }
       });
-  }, []);
+      return result;
+    } else {
+      return undefined;
+    }
+  };
+
+  let itemAssetID = user.photo ? user.photo.sys.id : undefined;
+  let itemAssetData = extractURL(data.includes, itemAssetID);
+  let itemAssetURL = itemAssetData ? itemAssetData.url : undefined;
 
   return (
     <div className="myProfile">
@@ -75,12 +84,13 @@ const MyProfile = () => {
           <div className="titleName">Wanted</div>
           <div className="nameProfile">{user.name}</div>
           <hr className="hrProfile" />
+          <div className="userImgWrapper">
+            <img className="userImg" src={itemAssetURL} alt="" />
+          </div>
           <div className="titlePlace">Last seen</div>
           <div className="placeProfile">{user.placeOfOrigin}</div>
           <div className="titleStatement">Warning</div>
           <div className="statementProfile">{user.statement}</div>
-          {/* <span>{user.currentPosition.lon}</span> */}
-          {/*  <span>{user.currentPosition.lat}</span> */}
         </div>
       ) : null}
       <hr className="hrProfile" />
@@ -96,3 +106,19 @@ const MyProfile = () => {
 };
 
 export default MyProfile;
+
+//let itemData = transferItem.fields;
+
+/* let itemAssetID = user.phot? itemData.photo.sys.id : undefined;
+  let itemAssetData = extractURL(data.includes, itemAssetID);
+  let itemAssetURL = itemAssetData ? itemAssetData.url : undefined;
+  
+
+
+
+<div className="img-wrapper">
+        <img
+          src={itemAssetURL}
+          alt={itemAssetTitle}
+        />
+      </div> */
