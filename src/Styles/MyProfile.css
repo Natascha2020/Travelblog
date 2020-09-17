@@ -22,7 +22,7 @@ body {
 .titleName {
   font-family: "Ewert";
   font-weight: bold;
-  font-size: 70px;
+  font-size: 60px;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
@@ -45,7 +45,7 @@ body {
 
 .nameProfile {
   font-weight: normal;
-  font-size: 30px;
+  font-size: 25px;
   margin: 0;
   text-transform: uppercase;
   font-weight: bold;
@@ -104,4 +104,9 @@ body {
   display: block;
   text-decoration: none;
   font-weight: bold;
+}
+
+.userImg {
+  width: 50%;
+  margin-bottom: 30px;
 }
