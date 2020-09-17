@@ -5,11 +5,24 @@ import "./../Styles/MyProfile.css";
 
 //My Profile route = Displays data about me, must display the number of saved posts I have
 
+/* const contentfulSpaceID = "hyf1ooddn06y";
+const contentfulToken = "Bo3__PcF0P-icxz-t6a04_PoUyn72Gz7ywctg4SIRdE";
+const contentfulType = "post";
+
+let contentfulURL =
+  "https://cdn.contentful.com/spaces/[spaceid]/environments/master/entries?access_token=[token]&content_type=[type]";
+contentfulURL = contentfulURL.replace("[spaceid]", contentfulSpaceID);
+contentfulURL = contentfulURL.replace("[token]", contentfulToken);
+contentfulURL = contentfulURL.replace("[type]", contentfulType);
+console.log(contentfulURL);
+ */
+
 const MyProfile = () => {
   const [user, setUser] = useState({});
   const [numberPosts, setNumberPosts] = useState("");
   const [error, setError] = useState("");
 
+  // Fetching fields and there values for user (just one current user)
   useEffect(() => {
     fetch(
       "https://cdn.contentful.com//spaces/hyf1ooddn06y/environments/master/entries?access_token=Bo3__PcF0P-icxz-t6a04_PoUyn72Gz7ywctg4SIRdE&select=fields&content_type=user"
@@ -26,6 +39,7 @@ const MyProfile = () => {
       });
   }, []);
 
+  // Fetching Posts of that user and storing number of posts (length of array)
   useEffect(() => {
     fetch(
       "https://cdn.contentful.com/spaces/hyf1ooddn06y/environments/master/entries?access_token=Bo3__PcF0P-icxz-t6a04_PoUyn72Gz7ywctg4SIRdE&content_type=post"
