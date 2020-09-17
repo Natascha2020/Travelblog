@@ -27,6 +27,7 @@ const ViewList = () => {
   const searchHandler=(e)=>{
     e.preventDefault();
     setSearchURL(contentfulURL + '&query=' + searchField);
+    
   }
 
 
@@ -63,6 +64,7 @@ const ViewList = () => {
                   transferItem={item}
                   transferData={data}
                   index={index}
+                  showIndex={false}
                 />
               );
             })
