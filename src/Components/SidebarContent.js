@@ -11,6 +11,11 @@ const SidebarContent = () => {
       <div className="divider"></div>
       <ul className="navWrapper">
         <li className="navItem">
+          <Link className="link" to="/">
+            Home
+          </Link>
+        </li>
+        <li className="navItem">
           <Link className="link" to="/Images">
             <span className="Icon">
               <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-globe" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

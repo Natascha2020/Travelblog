@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Images from "./Components/Images";
 import MyProfile from "./Components/MyProfile";
 import Rating from "./Components/Rating";
 import Sidebar from "react-sidebar";
 import SidebarContent from "./Components/SidebarContent";
+import ViewList from "./Components/ViewList";
 import "./App.css";
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
       <div className="App">
         <header className="App-header"></header>
 
-        <Sidebar sidebar={sidebarContent} open={sidebarOpen} onSetOpen={onSetSidebarOpen}>
+        { <Sidebar sidebarClassName="travel-sidebar" sidebar={sidebarContent} open={sidebarOpen} onSetOpen={onSetSidebarOpen}>
           {/* <span className="menu">
             <a onClick={() => onSetSidebarOpen(true)} href="#">
               =
@@ -34,7 +34,7 @@ const App = () => {
               =
             </button>
           </span>
-        </Sidebar>
+        
 
         <main>
           <h1>Travelblog</h1>
@@ -42,7 +42,7 @@ const App = () => {
 
         <Switch>
           <Route exact path="/images">
-            <Images />
+            <ViewList />
           </Route>
           <Route exact path="/MyProfile">
             <MyProfile />
@@ -52,6 +52,7 @@ const App = () => {
           </Route>
           <Route exact path="/"></Route>
         </Switch>
+        </Sidebar> }
       </div>
     </Router>
   );
