@@ -1,0 +1,50 @@
+                                                          .card {
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 0px;
+  background: #efefef;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.continent,
+.country,
+.location,
+.rating {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.africa {
+  background: #fed52e;
+}
+.europe {
+  background: #c10000;
+}
+.south-america {
+  background: #008000;
+}
+.north-america {
+  background: #00cc00;
+}
+.antarctica {
+  background: #0040ff;
+}
+.australia {
+  background: #c04080;
+}
+.asia {
+  background: #f33e01;
+}
+
+.card {
+  max-width: 300px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  margin: -5px;
+
+  font-size: 0;
+}

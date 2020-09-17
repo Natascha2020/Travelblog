@@ -3101,11 +3101,14 @@
       "resolved": "https://registry.npmjs.org/boolbase/-/boolbase-1.0.0.tgz",
       "integrity": "sha1-aN/1++YMUes3cl6p4+0xDcwed24="
     },
+<<<<<<< HEAD
     "bootstrap-icons": {
       "version": "1.0.0",
       "resolved": "https://registry.npmjs.org/bootstrap-icons/-/bootstrap-icons-1.0.0.tgz",
       "integrity": "sha512-PaQm3VtSqbUnWuyqGmFJG5iF9UMieDuk8raPOmKOtKeyWyiVshgLoKa+9EWGolGU/nvyBLEBWhZoQqhu9ccNBg=="
     },
+=======
+>>>>>>> 452f11f43253223a6f87042fd247922574c2b53e
     "brace-expansion": {
       "version": "1.1.11",
       "resolved": "https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz",
@@ -10560,6 +10563,7 @@
         "whatwg-fetch": "^3.0.0"
       }
     },
+<<<<<<< HEAD
     "react-bootstrap-icons": {
       "version": "1.0.0",
       "resolved": "https://registry.npmjs.org/react-bootstrap-icons/-/react-bootstrap-icons-1.0.0.tgz",
@@ -10568,6 +10572,8 @@
         "prop-types": "^15.7.2"
       }
     },
+=======
+>>>>>>> 452f11f43253223a6f87042fd247922574c2b53e
     "react-dev-utils": {
       "version": "10.2.1",
       "resolved": "https://registry.npmjs.org/react-dev-utils/-/react-dev-utils-10.2.1.tgz",
