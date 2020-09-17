@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import * as Icon from "react-bootstrap-icons";
 import "./../Styles/SidebarContent.css";
 
 const SidebarContent = () => {
