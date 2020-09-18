@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
+import Details from "./Details";
 import ErrorHandler from "./ErrorHandler";
 import * as settings from "./Settings";
 
@@ -13,19 +14,17 @@ console.log(contentfulURL);
 const ViewList = () => {
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
-  const [searchURL, setSearchURL]=useState(contentfulURL);
-  const [searchField, setSearchField]=useState("");
-  
-  const handleChange=(e)=>{
-    setSearchField(e.target.value);
-  }
-  
-  const searchHandler=(e)=>{
-    e.preventDefault();
-    setSearchURL(contentfulURL + '&query=' + searchField);
-    
-  }
+  const [searchURL, setSearchURL] = useState(contentfulURL);
+  const [searchField, setSearchField] = useState("");
 
+  const handleChange = (e) => {
+    setSearchField(e.target.value);
+  };
+
+  const searchHandler = (e) => {
+    e.preventDefault();
+    setSearchURL(contentfulURL + "&query=" + searchField);
+  };
 
   useEffect(() => {
     const getListData = () => {
@@ -33,6 +32,7 @@ const ViewList = () => {
         .then((response) => response.json())
         .then((data) => {
           setData(data);
+          console.log(data);
         })
         .catch((errorMsg) => {
           let errorOutput = `Error: ${errorMsg}`;
@@ -46,8 +46,10 @@ const ViewList = () => {
     <div className="container-images">
       <div className="search">
         <form onSubmit={(e) => searchHandler(e)}>
-        <input type="text" className="input-search" placeholder="Search" value={searchField} onChange={handleChange} />
-        <button className="btn-submit" type="submit">Search</button>
+          <input type="text" className="input-search" placeholder="Search" value={searchField} onChange={handleChange} />
+          <button className="btn-submit" type="submit">
+            Search
+          </button>
         </form>
       </div>
       <div className="cards">
@@ -55,13 +57,10 @@ const ViewList = () => {
         {data && data.items && data.includes
           ? data.items.map((item, index) => {
               return (
-                <Card
-                  key={"card-" + index}
-                  transferItem={item}
-                  transferData={data}
-                  index={index}
-                  showIndex={false}
-                />
+                <div>
+                  <Card key={"card-" + index} transferItem={item} transferData={data} index={index} showIndex={false} />;
+                  <Details key={"card-" + index} transferItem={item} transferData={data} index={index} />;
+                </div>
               );
             })
           : null}
