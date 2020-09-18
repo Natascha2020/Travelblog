@@ -30,7 +30,8 @@ Natascha, Davide, J
 * Modular, reusable component structure
 ________________________________________________
 # Structure
-<img src="./src/assets/structure-v2.png" width="800">
+
+<!-- <img src="./src/assets/structure-v2.png" width="800"> -->
 
 File  | Description
 ------------- | -------------
@@ -48,7 +49,7 @@ Viewlist  | List of all the 20 travel cards including search functionality
 
 # Credits
 
-Pictures are copyright free taken from;
+Pictures are copyright free, taken from;
 
 https://pixabay.com/
 https://pexels.com/
