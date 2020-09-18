@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from "react";
-import Card from "./Card";
+
 import Details from "./Details";
+
+import LocationCard from "./LocationCard";
 import ErrorHandler from "./ErrorHandler";
+
 import * as settings from "./Settings";
+import "./../Styles/ViewList.css";
 
 let contentfulURL = settings.contentfulURL;
 contentfulURL = contentfulURL.replace("[spaceid]", settings.contentfulSpaceID);
@@ -52,20 +56,22 @@ const ViewList = () => {
           </button>
         </form>
       </div>
-      <div className="cards">
-        {/* Displaying current search - if no input value in search bar, displaying all pokemon*/}
-        {data && data.items && data.includes
-          ? data.items.map((item, index) => {
-              return (
-                <div>
-                  <Card key={"card-" + index} transferItem={item} transferData={data} index={index} showIndex={false} />;
-                  <Details key={"card-" + index} transferItem={item} transferData={data} index={index} />;
-                </div>
-              );
-            })
-          : null}
+      <div className="cards-wrapper">
+        <div className="cards card-columns">
+          {/* Displaying current search - if no input value in search bar, displaying all pokemon*/}
+          {data && data.items && data.includes
+            ? data.items.map((item, index) => {
+                return (
+                  <div>
+                    <LocationCard key={"card-" + index} transferItem={item} transferData={data} index={index} showIndex={false} />
+                    <Details key={"card-" + index} transferItem={item} transferData={data} index={index} />;
+                  </div>
+                );
+              })
+            : null}
 
-        {error ? <ErrorHandler errorMessage={error} /> : null}
+          {error ? <ErrorHandler errorMessage={error} /> : null}
+        </div>
       </div>
     </div>
   );

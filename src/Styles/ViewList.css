@@ -1,0 +1,14 @@
+.btn-submit {
+    padding:5px;
+    border:1px solid #ccc;
+    margin-left:20px;
+}
+
+
+.input-search {
+    padding:5px;
+}
+
+.btn-submit:focus, .input-search:focus {
+    outline:none;
+}

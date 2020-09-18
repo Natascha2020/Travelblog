@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Card from "./Card";
+import LocationCard from "./LocationCard";
 import ErrorHandler from "./ErrorHandler";
 import * as settings from "./Settings";
 import "./../Styles/Rating.css";
@@ -51,7 +51,7 @@ const Rating = () => {
         {data && data.items && data.includes
           ? data.items.map((item, index) => {
               return (
-                <Card
+                <LocationCard
                   key={"card-" + index}
                   transferItem={item}
                   transferData={data}

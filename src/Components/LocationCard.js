@@ -1,8 +1,11 @@
 import React from "react";
-import Stars from "./Stars";
-import "./../Styles/Card.css";
+/* import Modal from 'react-bootstrap/Modal'; */
 
-const Card = (props) => {
+import Stars from "./Stars";
+
+import "./../Styles/LocationCard.css";
+
+const LocationCard = (props) => {
   const { transferItem, transferData, index, showIndex } = props;
 
   const extractURL = (assetData, assetID) => {
@@ -34,26 +37,26 @@ const Card = (props) => {
   let itemAssetData = extractURL(transferData.includes, itemAssetID);
   let itemAssetURL = itemAssetData ? itemAssetData.url : undefined;
   let itemAssetTitle = itemAssetData ? itemAssetData.title : undefined;
-
+  console.log("item-country "+itemContinent+" ["+itemCountry+"]");
 
   return (
     <div key={"item-" + index} className="card">
       {showIndex?<div className="ranking">{"#"+(index+1)}</div>:null}
-      <div className={continentClasses}>{itemContinent}</div>
-      {{ itemCountry } ? <div className="country">{itemCountry}</div> : null}
-      <div className="location">{itemLocation}</div>
-      <div className="rating">
-        <Stars rating={itemRating} maxStars="5" />
-      </div>
-      <div className="img-wrapper">
-        <img
-          src={itemAssetURL}
+      <img className="card-image card-img-top img-fluid" 
+          src={itemAssetURL} 
           alt={itemAssetTitle}
           title={itemAssetTitle}
-          className="card-image"
-        />
+      />
+      <div className="card-block">
+        <div className={continentClasses}>{itemContinent}</div>
+        <h4 className="card-title location"> {itemLocation}</h4>
+        {itemCountry && itemCountry!==""  ? <div className="country">{itemCountry}</div> : null}
+        <div className="rating">
+          <Stars rating={itemRating} maxStars="5" />
+        </div>    
       </div>
     </div>
+    
   );
 };
-export default Card;
+export default LocationCard;
