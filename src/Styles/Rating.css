@@ -9,15 +9,16 @@
 .rating-cards .ranking {
     display:block;
     position:absolute;
-    font-size:40px;
+    font-size:45px;
     margin-bottom:-20px;
     z-index:200;
     text-align:center;
     width:100%;
     color:white;
-    background:rgba(0,0,0,0.3);
+    background:rgba(0,0,0,0.2);
 }
 
 .rating-cards h2 {
-    color:white;
+    color: white;
+    font-size: 40px;
 }
