@@ -20,6 +20,11 @@ Natascha, Davide, J
 * Run "npm install" to install dependencies
 * Run "npm start" to run local server
 
+# See it live:
+* On [Codesandbox.io Fullscreen](https://rp7od.csb.app/Images)
+* On [Codesandbox.io Code View](https://codesandbox.io/s/inspiring-rubin-rp7od)
+* currently showing our master branch
+
 # Features
 * List view of posts (different travel destinations with description)
 * Search for names or part of names or continents
