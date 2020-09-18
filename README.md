@@ -35,23 +35,19 @@ ________________________________________________
 File  | Description
 ------------- | -------------
 index.js      | React.JS base file
-App.js  | Base App implementing fixed navigation and routing
-Home  | 
-LocationCard  | view list of all the 21 travel card (shows Continent, Country, Location, Image, Description and Rating)
-MyProfile  | shows the User profile page
-Rating  | component to list the 5 travel card with the highest rating
-Settings  | import the data from contentful
-SidebarContent.js  | component to show the left navigation bar
-Stars  | component to shoow the rating stars
-Viewlist  | component to display the search functionality
+App.js  | Base App implementing sidebar navigation and routing
+Description  | ...
+Home  | List of the travel destinations (shows Continent, Country, Location, Image, Description and Rating)
+LocationCard  | Detail component for one card element (shows Continent, Country, Location, Image and Rating)
+MyProfile  | Shows the User profile page and display the number of saved Items
+Rating  | Component to list the 5 travel cards with the highest rating
+Settings  | Global settings for the Contentful API
+SidebarContent | Component for the menu entries
+Stars  | Component to show the rating stars
+Viewlist  | List of all the 20 travel cards including search functionality
 
 # Credits
-* API: [Poke API](https://pokeapi.co/)
-* Type Icons: Based on [Daniel Motta's free Pokémon iconset](https://www.sketchappsources.com/free-source/3954-pokemon-types-icons-sketch-freebie-resource.html) 
-  * converted from sketch to svg, then to base64 inline-css
-* Pokeball Illustration by [Alanyadk](https://pixabay.com/users/Alanyadk-1919646) from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1536849)
-* High-Res Image API (https://pokeres.bastionbot.org/images/pokemon/[id].png)
-* Online Node Graph Editor [yworks](https://live.yworks.com/demos/layout/layoutstyles/index.html)
+
 
 
 # Have fun!
