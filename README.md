@@ -36,14 +36,14 @@ File  | Description
 ------------- | -------------
 index.js      | React.JS base file
 App.js  | Base App implementing fixed navigation and routing
-Home  |
-LocationCard  |
-MyProfile  | 
-Rating  |
-Settings  |
-SidebarContent.js  |
-Stars  |
-Viewlist  |
+Home  | 
+LocationCard  | view list of all the 21 travel card (shows Continent, Country, Location, Image, Description and Rating)
+MyProfile  | shows the User profile page
+Rating  | component to list the 5 travel card with the highest rating
+Settings  | import the data from contentful
+SidebarContent.js  | component to show the left navigation bar
+Stars  | component to shoow the rating stars
+Viewlist  | component to display the search functionality
 
 # Credits
 * API: [Poke API](https://pokeapi.co/)
@@ -57,5 +57,4 @@ Viewlist  |
 # Have fun!
 
 Best,
-Natascha, Davide, Thomas, J
-
+Natascha, Davide, J
