@@ -48,7 +48,10 @@ Viewlist  | List of all the 20 travel cards including search functionality
 
 # Credits
 
+Pictures are copyright free taken from;
 
+https://pixabay.com/
+https://pexels.com/
 
 # Have fun!
 
