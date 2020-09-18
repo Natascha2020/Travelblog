@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-
-import Details from "./Details";
-
+import Description from "./Description";
 import LocationCard from "./LocationCard";
 import ErrorHandler from "./ErrorHandler";
 
@@ -46,6 +44,14 @@ const ViewList = () => {
     getListData();
   }, [searchURL]);
 
+  const [show, setShow] = useState(false);
+  const [modalData, setModalData] = useState({});
+  const handleShow = (item) => {
+    setModalData(item);
+    setShow(true);
+  };
+  const handleClose = () => setShow(false);
+
   return (
     <div className="container-images">
       <div className="search">
@@ -63,13 +69,17 @@ const ViewList = () => {
             ? data.items.map((item, index) => {
                 return (
                   <div>
-                    <LocationCard key={"card-" + index} transferItem={item} transferData={data} index={index} showIndex={false} />
-                    <Details key={"card-" + index} transferItem={item} transferData={data} index={index} />;
+                    <div
+                      onClick={() => {
+                        handleShow(item);
+                      }}>
+                      <LocationCard key={"card-" + index} transferItem={item} transferData={data} index={index} />
+                    </div>
                   </div>
                 );
               })
             : null}
-
+          {modalData && modalData.fields ? <Description transferItem={modalData} handleClose={handleClose} show={show} /> : null}
           {error ? <ErrorHandler errorMessage={error} /> : null}
         </div>
       </div>
