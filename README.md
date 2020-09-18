@@ -36,19 +36,14 @@ File  | Description
 ------------- | -------------
 index.js      | React.JS base file
 App.js  | Base App implementing fixed navigation and routing
-PokeList  | 1st view, list of all (151) base pokémon (optionally shows abilities, sprites, stats, types)
-PokeDetail  | 2nd view, details for the selected pokémon (shows abilities, sprites, stats, types)
-CombatView  | 3rd view, a very basic stat comparison and combat system between two selected pokémons 
-BerriesView  | 4th view, a list of all berries
-CardList  | Sub-component used for all the cards on 1st view
-PokeDetailCard  | Sub-component used for pokémon details (1 used in 2nd view, 2 used in 3rd view)
-ErrorHandler  | Centralized error handling
-Abilities  | Component to list all abilities fetched from the API
-Sprites  | Component to list all sprites fetched from the API (we're using a higher-res version from an image API)
-Stats  | Component to list all base stats of a pokémon (including percentage meters)
-Types  | Component to the types (e.g. electric, fire) of a pokémon (including some hover icons)
-HoverIcon  | Component to show the type using Daniel Motta's fine icons and a hover effect to display the type text
-(Moves)  | not really a separate component but flexible additional loading for Pokémon moves
+Home  |
+LocationCard  |
+MyProfile  | 
+Rating  |
+Settings  |
+SidebarContent.js  |
+Stars  |
+Viewlist  |
 
 # Credits
 * API: [Poke API](https://pokeapi.co/)
