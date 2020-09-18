@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Card from "./Card";
+import LocationCard from "./LocationCard";
 import ErrorHandler from "./ErrorHandler";
+
 import * as settings from "./Settings";
+import "./../Styles/ViewList.css";
 
 let contentfulURL = settings.contentfulURL;
 contentfulURL = contentfulURL.replace("[spaceid]", settings.contentfulSpaceID);
@@ -50,12 +52,13 @@ const ViewList = () => {
         <button className="btn-submit" type="submit">Search</button>
         </form>
       </div>
-      <div className="cards">
+      <div className="cards-wrapper">
+      <div className="cards card-columns" >
         {/* Displaying current search - if no input value in search bar, displaying all pokemon*/}
         {data && data.items && data.includes
           ? data.items.map((item, index) => {
               return (
-                <Card
+                <LocationCard
                   key={"card-" + index}
                   transferItem={item}
                   transferData={data}
@@ -67,6 +70,7 @@ const ViewList = () => {
           : null}
 
         {error ? <ErrorHandler errorMessage={error} /> : null}
+      </div>
       </div>
     </div>
   );
