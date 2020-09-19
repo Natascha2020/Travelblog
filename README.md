@@ -38,19 +38,20 @@ ________________________________________________
 
 <!-- <img src="./src/assets/structure-v2.png" width="800"> -->
 
-File  | Description
+File          | Description
 ------------- | -------------
 index.js      | React.JS base file
-App.js  | Base App implementing sidebar navigation and routing
-Description  | ...
-Home  | List of the travel destinations (shows Continent, Country, Location, Image, Description and Rating)
+App.js        | Base App implementing sidebar navigation and routing
+Description   | Component to update modal content
+Home          | List of the travel destinations (shows Continent, Country, Location, Image, Description and Rating)
 LocationCard  | Detail component for one card element (shows Continent, Country, Location, Image and Rating)
-MyProfile  | Shows the User profile page and display the number of saved Items
-Rating  | Component to list the 5 travel cards with the highest rating
-Settings  | Global settings for the Contentful API
-SidebarContent | Component for the menu entries
-Stars  | Component to show the rating stars
-Viewlist  | List of all the 20 travel cards including search functionality
+ModalSetup    | Component to provide modal functionality
+MyProfile     | Shows the User profile page and display the number of saved Items
+Rating        | Component to list the 5 travel cards with the highest rating
+Settings      | Global settings for the Contentful API
+SidebarContent| Component for the menu entries
+Stars         | Component to show the rating stars
+Viewlist      | List of all the 20 travel cards including search functionality
 
 # Credits
 
