@@ -5,10 +5,11 @@ import Button from "react-bootstrap/Button";
 const ModalSetup = (props) => {
   const { hyperLink, hyperLinkWord, richText, show, handleClose } = props;
 
+  //Modal Bootstrap structure - updating states in ViewList component with props show, handleClose
   return (
     <div>
       <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
-        <Modal.Header closeButton>
+        <Modal.Header>
           <Modal.Title id="contained-modal-title-vcenter">
             <a href={hyperLink}>{hyperLinkWord}</a>
           </Modal.Title>

@@ -7,11 +7,11 @@ const Description = (props) => {
   const [hyperLink, setHyperLink] = useState("");
   const [hyperLinkWord, setHyperLinkWord] = useState("");
 
-  console.log(transferItem);
-
+  // Getting content data array
   let richTextItem = transferItem.fields.header.content[0].content;
   console.log(richTextItem);
 
+  // Extracting rich text, hyperlink and hyperlink value for rendering in modal
   const extractRichText = () => {
     let wholeText = [];
 
@@ -35,6 +35,7 @@ const Description = (props) => {
     extractRichText();
   }, [transferItem]);
 
+  //Rendering Modal after data-update, passing down modal closing-function and states to ModalSetUp
   return (
     <div>
       {richText && richText.length && hyperLinkWord && hyperLinkWord.length && hyperLink && hyperLink.length ? (
