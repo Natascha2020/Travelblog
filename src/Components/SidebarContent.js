@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./../Styles/SidebarContent.css";
 
+// Sidebar content imported in App.js
 const SidebarContent = () => {
   return (
     <div className="sideWrapper">

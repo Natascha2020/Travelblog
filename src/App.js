@@ -1,20 +1,19 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Sidebar from "react-sidebar";
 import MyProfile from "./Components/MyProfile";
 import Rating from "./Components/Rating";
-import Sidebar from "react-sidebar";
 import SidebarContent from "./Components/SidebarContent";
 import ViewList from "./Components/ViewList";
 import Home from "./Components/Home";
 import "./App.css";
 
 const App = () => {
+  // Handling sidebar opening and closing (clicking anywhere as build-in prop)
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const onSetSidebarOpen = (open) => {
     setSidebarOpen(open);
   };
-
-  /* const onSetOpen = (open) => setOpen(true); */
 
   const sidebarContent = <SidebarContent />;
 
@@ -25,11 +24,6 @@ const App = () => {
 
         {
           <Sidebar sidebarClassName="travel-sidebar" sidebar={sidebarContent} open={sidebarOpen} onSetOpen={onSetSidebarOpen}>
-            {/* <span className="menu">
-            <a onClick={() => onSetSidebarOpen(true)} href="#">
-              =
-            </a>
-          </span> */}
             <span>
               <button className="menu" onClick={() => onSetSidebarOpen(true)}>
                 =
