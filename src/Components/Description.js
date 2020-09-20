@@ -9,22 +9,20 @@ const Description = (props) => {
 
   // Getting content data array
   let richTextItem = transferItem.fields.header.content[0].content;
-  console.log(richTextItem);
 
-  // Extracting rich text, hyperlink and hyperlink value for rendering in modal
+  // Extracting rich text, hyperlink and hyperlink value for rendering in modaly
+
   const extractRichText = () => {
     let wholeText = [];
 
     richTextItem.forEach((element) => {
-      if (element.nodeType === "text") {
+      if (element.nodeType === "text" && element.value.length) {
         wholeText.push(element.value);
-      } else if (element.nodeType === "hyperlink") {
+      } else if (element.nodeType === "hyperlink" && element.content[0].value.length) {
         wholeText.push(element.content[0].value);
         setHyperLink(element.data.uri);
-        setHyperLinkWord(element.content[0].value);
-      } else {
-        setHyperLink("");
-        setHyperLinkWord("Description");
+        let textValue = element.content[0].value;
+        setHyperLinkWord(textValue.charAt(0).toUpperCase() + textValue.slice(1));
       }
     });
     let joinedText = wholeText.join();

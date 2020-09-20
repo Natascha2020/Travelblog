@@ -22,8 +22,7 @@ body {
   font-size: 20px;
   display: flex;
   flex-direction: flex-end;
-  margin-top: 1.5em;
-  margin-left: 1.5em;
+  margin: 1.5em;
   position: fixed;
   z-index: 1;
   border-radius: 8px;
@@ -40,20 +39,14 @@ body > .navbar-collapse:before {
   background: #f00 !important;
 }
 
-@media only screen and (min-width: 700px) and (max-width: 1000px) {
+/* @media only screen and (min-width: 700px) and (max-width: 1000px) {
   .menu {
-    font-size: 20px;
-    margin-top: 2em;
-    margin-left: 4.5em;
-    padding: 0.5em 1.6em;
   }
-}
+} */
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 500px) {
   .menu {
-    font-size: 18px;
-    margin-top: 0.6em;
-    margin-left: 0.6em;
-    padding: 0.2em 1em;
+    padding: 0.3em 1em;
+    margin: 0.3em;
   }
 }
