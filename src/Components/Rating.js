@@ -9,8 +9,8 @@ let contentfulURL = settings.contentfulURL;
 contentfulURL = contentfulURL.replace("[spaceid]", settings.contentfulSpaceID);
 contentfulURL = contentfulURL.replace("[token]", settings.contentfulToken);
 contentfulURL = contentfulURL.replace("[type]", settings.contentfulType);
-contentfulURL += "&order=-fields.rating&limit=5";
-console.log(contentfulURL);
+contentfulURL += "&order=-fields.rating,fields.continent,fields.country&limit=5";
+//console.log(contentfulURL);
 
 /* */
 const Rating = () => {

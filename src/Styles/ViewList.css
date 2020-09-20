@@ -9,18 +9,33 @@
     padding:5px;
 }
 
-.btn-submit:focus, .input-search:focus {
+.btn-submit:focus, .input-search:focus, .btn-select-all:focus, .btn-select-none:focus {
     outline:none;
 }
 .continentSelection {margin-top:20px;}
-.btn-continent {
+
+.btn-select-all, .btn-select-none {
+    border:none;
+    border-top:3px solid #999;
+}
+.btn-continent, .btn-select-all, .btn-select-none {
     padding:5px 20px;
-   
+    
+    border-right:1px solid #ccc;
+    border-left:1px solid #ccc;
+    margin-right:-1px;
     background:white;
     margin-top:5px;
     margin-bottom:5px;
-    border-right:1px solid #ccc;
+    
     user-select: none;
+    transition:transform 0.5s ease-in-out;
+    z-index:2;
+}
+
+.btn-continent:hover, .btn-select-all:hover, .btn-select-none:hover {
+    transform:translateY(-5px) ;
+    z-index:3;
 }
 
 /* Hiding the checkbox, but allowing it to be focused */
@@ -38,18 +53,17 @@
     background:#ccc;
 }
 
-.badgebox:focus + .badge
-{
-    /* Set something to make the badge looks focused */
-    /* This really depends on the application, in my case it was: */
-    
-    /* Adding a light border */
-    /* box-shadow: inset 0px 0px 5px;*/
-    /* Taking the difference out of the padding */
+.badgebox:focus + .badge{
+    background:#ccc;
 }
 
-.badgebox:checked + .badge
-{
+.badgebox:checked + .badge{
     /* Move the check mark back when checked */
 	text-indent: 0;
+}
+
+.filter-warning {
+    font-size:20px;
+    color:white;
+    text-shadow:2px 2px 3px rgba(0,0,0,0.5);
 }

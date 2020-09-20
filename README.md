@@ -1,68 +1,66 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# WBS Coding School Groupwork
+## Travelblog
 
-## Available Scripts
+## Group Members
+Natascha, Davide, J
 
-In the project directory, you can run:
+# Stack
+* [Node.js](https://nodejs.org/)
+* [REACT.JS](https://reactjs.org/) (User Interface) using functional components 
+* JS/JSX (blog logic)
+* CSS (external styling)
+* GIT/GITHUB (branches per team member)
+* [Codesandbox.io](https://codesandbox.io) (testing, collaborative coding, bound to Github)
+* [Contentful](https://www.contentful.com/) (content management)
 
-### `npm start`
+# How to run locally
+* System requirements: [Node.js](https://nodejs.org/)
+* Fork the repository
+* Clone it to your local repo
+* Run "npm install" to install dependencies
+* Run "npm start" to run local server
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# See it live:
+* On [Codesandbox.io Fullscreen](https://rp7od.csb.app/Images)
+* On [Codesandbox.io Code View](https://codesandbox.io/s/inspiring-rubin-rp7od)
+* currently showing our master branch
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+# Features
+* List view of posts (different travel destinations with description)
+* Search for names or part of names or continents
+* Detail view of best-rated must-visit-destinations from traveler (user)
+* About me information page of the traveler (user)
+* Displayed number of saved posts by traveler on profile page
+* Side navigation menu (open on button, closed by clicking anywhere on the page)
+* Modular, reusable component structure
+________________________________________________
+# Structure
 
-### `npm test`
+<!-- <img src="./src/assets/structure-v2.png" width="800"> -->
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+File          | Description
+------------- | -------------
+index.js      | React.JS base file
+App.js        | Base app implementing sidebar navigation and routing
+Description   | Component to update modal content
+Home          | List of the travel destinations (shows Continent, Country, Location, Image, Description and Rating)
+LocationCard  | Detail component for one card element (shows Continent, Country, Location, Image and Rating)
+ModalSetup    | Component to provide modal functionality
+MyProfile     | Shows the User profile page and display the number of saved Items
+Rating        | Component to list the 5 travel cards with the highest rating
+Settings      | Global settings for the Contentful API
+SidebarContent| Component for the menu entries
+Stars         | Component to show the rating stars
+Viewlist      | List of all the 20 travel cards including search functionality
 
-### `npm run build`
+# Credits
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Pictures are copyright free, taken from:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+* [Pixabay](https://pixabay.com/)
+* [Pexels](https://pexels.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Have fun!
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Best,
+Natascha, Davide, J

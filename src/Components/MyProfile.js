@@ -5,18 +5,6 @@ import "./../Styles/MyProfile.css";
 
 //My Profile route = Displays data about me, must display the number of saved posts I have
 
-/* const contentfulSpaceID = "hyf1ooddn06y";
-const contentfulToken = "Bo3__PcF0P-icxz-t6a04_PoUyn72Gz7ywctg4SIRdE";
-const contentfulType = "post";
-
-let contentfulURL =
-  "https://cdn.contentful.com/spaces/[spaceid]/environments/master/entries?access_token=[token]&content_type=[type]";
-contentfulURL = contentfulURL.replace("[spaceid]", contentfulSpaceID);
-contentfulURL = contentfulURL.replace("[token]", contentfulToken);
-contentfulURL = contentfulURL.replace("[type]", contentfulType);
-console.log(contentfulURL);
- */
-
 const MyProfile = () => {
   const [user, setUser] = useState({});
   const [numberPosts, setNumberPosts] = useState("");
