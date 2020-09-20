@@ -6,9 +6,12 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
+  /* removed strict mode as bootstrap modal is still in transition to React for
+  deprecation of findDOMNode 
   <React.StrictMode>
     <App />
-  </React.StrictMode>, 
+  </React.StrictMode>,  */
+  <App />,
   document.getElementById('root')
 );
 
