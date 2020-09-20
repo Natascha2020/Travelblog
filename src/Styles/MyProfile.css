@@ -11,7 +11,7 @@ body {
   border-radius: 5px;
   color: rgb(82, 42, 10);
   border-radius: 2px;
-  width: 45%;
+  width: 40%;
   min-width: 300px;
   margin: 20px auto;
   padding: 20px;
@@ -22,30 +22,26 @@ body {
 .titleName {
   font-family: "Ewert";
   font-weight: bold;
-  font-size: 60px;
+  font-size: 40px;
   text-transform: uppercase;
-  margin-bottom: 10px;
 }
 
 .titlePlace {
   font-family: "Ewert";
   font-weight: bold;
-  font-size: 30px;
+  font-size: 25px;
   text-transform: uppercase;
-  margin-bottom: 10px;
 }
 
 .titleStatement {
   font-family: "Ewert";
   font-weight: bold;
-  font-size: 30px;
+  font-size: 25px;
   text-transform: uppercase;
-  margin-bottom: 10px;
 }
 
 .nameProfile {
-  font-weight: normal;
-  font-size: 25px;
+  font-size: 20px;
   margin: 0;
   text-transform: uppercase;
   font-weight: bold;
@@ -53,37 +49,37 @@ body {
 }
 
 .hrProfile {
-  margin: 40px 30px;
+  margin: 20px 30px;
   border: 0;
   border-bottom: 2px solid rgb(82, 42, 10);
 }
 
 .placeProfile {
   font-weight: normal;
-  font-size: 30px;
-  margin-bottom: 30px;
+  font-size: 20px;
+  margin-bottom: 10px;
   color: rgb(140, 86, 41);
 }
 
 .statementProfile {
   font-weight: normal;
-  font-size: 20px;
-  margin: 0;
+  font-size: 18px;
+  max-width: 300px;
+  margin: 0 auto;
   color: rgb(140, 86, 41);
 }
 
 .postsProfile {
-  margin-top: 1em;
   font-size: 25px;
+  font-style: bold;
 }
 
 .contact {
   font-style: italic;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .linkProfile {
-  font-style: italic;
   text-decoration: none;
   color: rgb(82, 42, 10);
 }
@@ -104,9 +100,10 @@ body {
   display: block;
   text-decoration: none;
   font-weight: bold;
+  color: #595341;
 }
 
 .userImg {
-  width: 50%;
+  width: 35%;
   margin-bottom: 30px;
 }

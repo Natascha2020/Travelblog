@@ -33,16 +33,15 @@ body {
   box-shadow: none;
 }
 
+.menu:hover {
+  background-color: #595341;
+}
+
 .sidebar:before,
 body > .navbar-collapse:before {
   opacity: 0.33;
   background: #f00 !important;
 }
-
-/* @media only screen and (min-width: 700px) and (max-width: 1000px) {
-  .menu {
-  }
-} */
 
 @media only screen and (max-width: 500px) {
   .menu {
