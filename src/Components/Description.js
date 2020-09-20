@@ -7,29 +7,29 @@ const Description = (props) => {
   const [hyperLink, setHyperLink] = useState("");
   const [hyperLinkWord, setHyperLinkWord] = useState("");
 
-  // Getting content data array
+  
+
+  useEffect(() => {
+    // Getting content data array
   let richTextItem = transferItem.fields.header.content[0].content;
 
   // Extracting rich text, hyperlink and hyperlink value for rendering in modaly
-
-  const extractRichText = () => {
-    let wholeText = [];
-
-    richTextItem.forEach((element) => {
-      if (element.nodeType === "text" && element.value.length) {
-        wholeText.push(element.value);
-      } else if (element.nodeType === "hyperlink" && element.content[0].value.length) {
-        wholeText.push(element.content[0].value);
-        setHyperLink(element.data.uri);
-        let textValue = element.content[0].value;
-        setHyperLinkWord(textValue.charAt(0).toUpperCase() + textValue.slice(1));
-      }
-    });
-    let joinedText = wholeText.join();
-    setRichText(joinedText);
-  };
-
-  useEffect(() => {
+    const extractRichText = () => {
+      let wholeText = [];
+  
+      richTextItem.forEach((element) => {
+        if (element.nodeType === "text" && element.value.length) {
+          wholeText.push(element.value);
+        } else if (element.nodeType === "hyperlink" && element.content[0].value.length) {
+          wholeText.push(element.content[0].value);
+          setHyperLink(element.data.uri);
+          let textValue = element.content[0].value;
+          setHyperLinkWord(textValue.charAt(0).toUpperCase() + textValue.slice(1));
+        }
+      });
+      let joinedText = wholeText.join('');
+      setRichText(joinedText);
+    };
     extractRichText();
   }, [transferItem]);
 

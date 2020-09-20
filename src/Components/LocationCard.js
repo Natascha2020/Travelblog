@@ -37,6 +37,7 @@ const LocationCard = (props) => {
   let itemAssetURL = itemAssetData ? itemAssetData.url : undefined;
   let itemAssetTitle = itemAssetData ? itemAssetData.title : undefined;
 
+
   return (
     <div key={"item-" + index} className="card">
       {showIndex ? <div className="ranking">{"#" + (index + 1)}</div> : null}
