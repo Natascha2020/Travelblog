@@ -41,7 +41,7 @@ ________________________________________________
 File          | Description
 ------------- | -------------
 index.js      | React.JS base file
-App.js        | Base App implementing sidebar navigation and routing
+App.js        | Base app implementing sidebar navigation and routing
 Description   | Component to update modal content
 Home          | List of the travel destinations (shows Continent, Country, Location, Image, Description and Rating)
 LocationCard  | Detail component for one card element (shows Continent, Country, Location, Image and Rating)
@@ -55,10 +55,10 @@ Viewlist      | List of all the 20 travel cards including search functionality
 
 # Credits
 
-Pictures are copyright free, taken from;
+Pictures are copyright free, taken from:
 
-https://pixabay.com/
-https://pexels.com/
+* [Pixabay](https://pixabay.com/)
+* [Pexels](https://pexels.com/)
 
 # Have fun!
 
