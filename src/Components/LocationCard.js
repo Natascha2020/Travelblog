@@ -37,7 +37,7 @@ const LocationCard = (props) => {
   let itemAssetData = extractURL(transferData.includes, itemAssetID);
   let itemAssetURL = itemAssetData ? itemAssetData.url : undefined;
   let itemAssetTitle = itemAssetData ? itemAssetData.title : undefined;
-  console.log("item-country "+itemContinent+" ["+itemCountry+"]");
+  
 
   return (
     <div key={"item-" + index} className="card">

@@ -5,10 +5,6 @@ import * as settings from "./Settings";
 import "./../Styles/Rating.css";
 
 
-const contentfulSpaceID = "hyf1ooddn06y";
-const contentfulToken = "Bo3__PcF0P-icxz-t6a04_PoUyn72Gz7ywctg4SIRdE";
-const contentfulType = "post";
-
 let contentfulURL = settings.contentfulURL;
 contentfulURL = contentfulURL.replace("[spaceid]", settings.contentfulSpaceID);
 contentfulURL = contentfulURL.replace("[token]", settings.contentfulToken);
