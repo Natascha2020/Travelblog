@@ -1,3 +1,7 @@
+.travel-sidebar-content {
+    overflow-y: scroll !important;
+  }
+
 .btn-submit {
     padding:5px;
     border:1px solid #ccc;

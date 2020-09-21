@@ -13,7 +13,9 @@ contentfulURL = contentfulURL.replace("[token]", settings.contentfulToken);
 contentfulURL = contentfulURL.replace("[type]", settings.contentfulType);
 //console.log(contentfulURL);
 
-const ViewList = () => {
+const ViewList = (props) => {
+  const {prefiltered} = props.match.params;
+  const {history} = props;
   const [data, setData] = useState([]);
   const [error, setError] = useState("");
 
@@ -62,6 +64,7 @@ const updateContinentFilter=(filterSettings)=>{
   let allTrue=true;
   let anyTrue=false;
   let filterString="&fields.continent[in]=";
+
   // loop over all keys of filter-settings
   Object.keys(filterSettings).forEach((key, index) => {
     let continent=key;
@@ -93,9 +96,14 @@ const updateContinentFilter=(filterSettings)=>{
 useEffect(() => { 
   const filterResult={};
     let creg;
+   //console.log("Oh, yes, prefiltered for: "+prefiltered,match.params.prefiltered)
     settings.continents.map((continent, index) => {
       creg=continent;
-      filterResult[creg]=true;
+      if(prefiltered){
+        filterResult[creg]=(prefiltered===creg);
+      }else{
+        filterResult[creg]=true;
+      }
       return null;
     });
     setCheckboxState(filterResult);
@@ -105,18 +113,19 @@ useEffect(() => {
     const filterResult={};
 
     const handleFilterChange=(e)=>{
-      console.log("before",e.target.id, filterResult);
+      // reset the URL to /Images after first filter change when user came in prefiltered
+      if (prefiltered) history.push("/Images");
       filterResult[e.target.id]=!filterResult[e.target.id];
-      console.log("after",e.target.id,filterResult);
-
       setCheckboxState(filterResult);
-      
       updateContinentFilter(filterResult);
       return null;
     }
   
     const setAllFilters=(e,setTo)=>{
       e.preventDefault();
+      // reset the URL to /Images after first filter change when user came in prefiltered
+      if (prefiltered) history.push("/Images");
+            
       Object.keys(filterResult).forEach((key, value) => {
         filterResult[key]=setTo;
       });
@@ -149,6 +158,7 @@ useEffect(() => {
       setContinentButtons(contButtons);
       updateContinentFilter(filterResult);
       setCheckboxState(checkboxState);
+      
     }
     }, [checkboxState]);
   

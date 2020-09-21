@@ -4,13 +4,6 @@
 
 }
 
-.travel-sidebar-content {
-  overflow-y: scroll !important;
-}
-
-
-
-
 .travel-sidebar-overlay{
   z-index:50 !important;
 }
