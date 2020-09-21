@@ -61,7 +61,7 @@ Viewlist      | List of all the 20 travel cards including search functionality
    * [Pixabay](https://pixabay.com/)
    * [Pexels](https://pexels.com/)
 * Node-graph is created with the free online tool by [yworks](https://live.yworks.com/demos/layout/layoutstyles/index.html)
-* For our sliding side-menu we used [react-sidebar by balloob](https://github.com/balloob/react-sidebar)
+* For our slide-out menu we are using [react-sidebar by balloob](https://github.com/balloob/react-sidebar)
 
 # Have fun!
 
