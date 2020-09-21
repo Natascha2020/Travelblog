@@ -1,7 +1,7 @@
 h1 {
   color: #a67c00;
   font-size: 50px;
-  text-shadow: 4px 4px 4px #000000;
+  text-shadow: 2px 2px 3px #000000;
 }
 
 html,
@@ -24,7 +24,7 @@ body {
   flex-direction: flex-end;
   margin: 1.5em;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   border-radius: 8px;
 }
 
@@ -41,6 +41,7 @@ body {
 body > .navbar-collapse:before {
   opacity: 0.33;
   background: #f00 !important;
+  z-index:50;
 }
 
 @media only screen and (max-width: 500px) {

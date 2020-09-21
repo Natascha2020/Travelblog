@@ -23,7 +23,7 @@ const App = () => {
         <header className="App-header"></header>
 
         {
-          <Sidebar sidebarClassName="travel-sidebar" contentClassName="travel-sidebar-content" sidebar={sidebarContent} open={sidebarOpen} onSetOpen={onSetSidebarOpen}>
+          <Sidebar sidebarClassName="travel-sidebar" contentClassName="travel-sidebar-content" overlayClassName="travel-sidebar-overlay" sidebar={sidebarContent} open={sidebarOpen} onSetOpen={onSetSidebarOpen}>
             <span>
               <button className="menu" onClick={() => onSetSidebarOpen(true)}>
                 =
