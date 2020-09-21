@@ -1,0 +1,42 @@
+
+
+.home-image {
+    width:100vw;
+    border:0;
+    margin:0;
+}
+
+.home {
+    margin-top: 130px;
+}
+html,
+body {
+  background-color: black;
+}
+
+.travel-sidebar-content{
+    overflow-y:auto !important;
+}
+  
+  
+  .home .africa {
+      border-top: 3px solid #fed52e;
+    }
+    .home .europe {
+      border-top: 3px solid #c10000;
+    }
+    .home .south-america {
+      border-top: 3px solid #008000;
+    }
+    .home .north-america {
+      border-top: 3px solid #00cc00;
+    }
+    .home .antarctica {
+      border-top: 3px solid #0040ff;
+    }
+    .home .australia {
+      border-top: 3px solid #c04080;
+    }
+    .home .asia {
+      border-top: 3px solid #f33e01;
+    }
