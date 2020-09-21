@@ -21,9 +21,9 @@ Natascha, Davide, J
 * Run "npm start" to run local server
 
 # See it live:
-* On [Codesandbox.io Fullscreen](https://rp7od.csb.app/Images)
-* On [Codesandbox.io Code View](https://codesandbox.io/s/inspiring-rubin-rp7od)
-* currently showing our master branch
+* On [Codesandbox.io Fullscreen](https://rfnpn.csb.app/)
+* On [Codesandbox.io Code View](https://codesandbox.io/s/heuristic-wozniak-rfnpn?file=/src/App.js)
+* currently showing our "codesandbox" branch
 
 # Features
 * List view of posts (different travel destinations with description)
