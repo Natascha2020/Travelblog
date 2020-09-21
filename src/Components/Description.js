@@ -7,16 +7,14 @@ const Description = (props) => {
   const [hyperLink, setHyperLink] = useState("");
   const [hyperLinkWord, setHyperLinkWord] = useState("");
 
-  
-
   useEffect(() => {
     // Getting content data array
-  let richTextItem = transferItem.fields.header.content[0].content;
+    let richTextItem = transferItem.fields.header.content[0].content;
 
-  // Extracting rich text, hyperlink and hyperlink value for rendering in modaly
+    // Extracting rich text, hyperlink and hyperlink value for rendering in modaly
     const extractRichText = () => {
       let wholeText = [];
-  
+
       richTextItem.forEach((element) => {
         if (element.nodeType === "text" && element.value.length) {
           wholeText.push(element.value);
@@ -27,7 +25,7 @@ const Description = (props) => {
           setHyperLinkWord(textValue.charAt(0).toUpperCase() + textValue.slice(1));
         }
       });
-      let joinedText = wholeText.join('');
+      let joinedText = wholeText.join("");
       setRichText(joinedText);
     };
     extractRichText();
