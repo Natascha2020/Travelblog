@@ -73,12 +73,32 @@
 }
  
 .card-columns {column-count:4 !important;}
-/* bootstrap cards */
- @media only screen and (max-width: 1200px) {.card-columns {column-count: 3 !important;}}
- @media only screen and (max-width: 1000px) {.card-columns {column-count: 2 !important;}}
- @media only screen and (max-width: 700px) {.card-columns {column-count: 1 !important;}}
 
+/* these are used to avoid empty columns for less than 4 results */
 .force-column-count-1 {column-count:1 !important;}
 .force-column-count-2 {column-count:2 !important;}
 .force-column-count-3 {column-count:3 !important;}
-.force-column-count-4 {column-count:4 !important;}
+
+/* bootstrap cards */
+ @media only screen and (max-width: 1200px) {
+   .card-columns {column-count: 3 !important;}
+   .force-column-count-1 {column-count:1 !important;}
+   .force-column-count-2 {column-count:2 !important;}
+   .force-column-count-3 {column-count:3 !important;}
+  }
+ @media only screen and (max-width: 1000px) {
+   .card-columns {column-count: 2 !important;}
+   /* never more than 2 columns */
+   .force-column-count-1 {column-count:1 !important;}
+   .force-column-count-2 {column-count:2 !important;}
+   .force-column-count-3 {column-count:2 !important;}
+  }
+ @media only screen and (max-width: 700px) {
+   .card-columns {column-count: 1 !important;}
+   /* never more than 1 column */
+   .force-column-count-1 {column-count:1 !important;}
+   .force-column-count-2 {column-count:1 !important;}
+   .force-column-count-3 {column-count:1 !important;}
+  }
+
+

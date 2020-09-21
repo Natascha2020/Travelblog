@@ -96,7 +96,6 @@ const updateContinentFilter=(filterSettings)=>{
 useEffect(() => { 
   const filterResult={};
     let creg;
-   //console.log("Oh, yes, prefiltered for: "+prefiltered,match.params.prefiltered)
     settings.continents.map((continent, index) => {
       creg=continent;
       if(prefiltered){
@@ -107,7 +106,7 @@ useEffect(() => {
       return null;
     });
     setCheckboxState(filterResult);
-  }, []);
+  }, [prefiltered]);
 
   useEffect(() => { 
     const filterResult={};
@@ -160,7 +159,7 @@ useEffect(() => {
       setCheckboxState(checkboxState);
       
     }
-    }, [checkboxState]);
+    }, [checkboxState,history,prefiltered]);
   
     
 
@@ -174,7 +173,13 @@ useEffect(() => {
   };
   // Handling Modal closing-event
   const handleClose = () => setShow(false);
-
+  let columnClasses="cards card-columns";
+  if (data.items){
+    
+    if (data.items.length<4){
+      columnClasses+=" force-column-count-"+data.items.length;
+    }
+  }
   return (
     <div className="container-images">
       
@@ -191,7 +196,7 @@ useEffect(() => {
         <div className="filter-warning">{filterWarning}</div>
       </div>
       <div className="cards-wrapper">
-        <div className="cards card-columns">
+        <div className={columnClasses}>
           {/* Displaying current search - if no input value in search bar, displaying all posts*/}
           {data && data.items && data.includes 
             ? data.items.map((item, index) => {
