@@ -43,10 +43,12 @@ File          | Description
 index.js      | React.JS base file
 App.js        | Base app implementing sidebar navigation and routing
 Description   | Component to update modal content
+ErrorHandler  | Basic error handling
 Home          | List of the travel destinations (shows Continent, Country, Location, Image, Description and Rating)
 LocationCard  | Detail component for one card element (shows Continent, Country, Location, Image and Rating)
 ModalSetup    | Component to provide modal functionality
 MyProfile     | Shows the User profile page and display the number of saved Items
+ParallaxCard  | Shows 3 elements, a parallax image, an info text on top of it and a description box
 Rating        | Component to list the 5 travel cards with the highest rating
 Settings      | Global settings for the Contentful API
 SidebarContent| Component for the menu entries
