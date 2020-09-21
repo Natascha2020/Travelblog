@@ -11,7 +11,7 @@
   
   .no-parallax {
     
-    background: url("https://images.pexels.com/photos/697662/pexels-photo-697662.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    background: url("./../Assets/compass-backdrop.jpg");
     
     background-repeat: no-repeat;
     background-size: cover;
