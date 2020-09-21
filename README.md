@@ -57,10 +57,10 @@ Viewlist      | List of all the 20 travel cards including search functionality
 
 # Credits
 
-Pictures are copyright free, taken from:
-
-* [Pixabay](https://pixabay.com/)
-* [Pexels](https://pexels.com/)
+* Pictures are CC0 Creative Commons, attribution free, taken from:
+   * [Pixabay](https://pixabay.com/)
+   * [Pexels](https://pexels.com/)
+* Node-graph is created with the free online tool by [yworks](https://live.yworks.com/demos/layout/layoutstyles/index.html)
 
 # Have fun!
 
