@@ -36,7 +36,7 @@ Natascha, Davide, J
 ________________________________________________
 # Structure
 
-<img src="./src/Assets/readme/node-structure.png" alt="Node structure of app component hierarchy" title="Node structure of app component hierarchy" width="800">
+<img src="./src/Assets/readme/node-structure.png" title="Node structure of app component hierarchy" alt="Node structure of app component hierarchy" width="800">
 
 File          | Description
 ------------- | -------------
