@@ -37,7 +37,7 @@
     position: absolute;
     padding: 1rem;
     box-shadow: 2 2 20px rgba(0,0,0,1);
-    top: 35%;
+    top: 50%;
     left: 50%;
     transform: translateZ(-1px) scale(2) translate(-25%, -50%);
   }
