@@ -28,6 +28,8 @@ Natascha, Davide, J
 # Features
 * List view of posts (different travel destinations with description)
 * Search for names or part of names or continents
+* Filter results by continent
+* Linking to prefiltered results (e.g. /Images/Africa)
 * Detail view of best-rated must-visit-destinations from traveler (user)
 * About me information page of the traveler (user)
 * Displayed number of saved posts by traveler on profile page
