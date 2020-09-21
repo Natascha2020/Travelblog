@@ -9,6 +9,10 @@
     
   }
   
+  .section a, .section a:link, .section a:visited, .section a:hover, .section a:active {
+    color:#119 !important;
+  }      
+
   .no-parallax {
     
     background: url("./../Assets/compass-backdrop.jpg");
