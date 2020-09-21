@@ -1,10 +1,11 @@
 .travel-sidebar {
   z-index:200 !important;
   background:rgba(0,0,0,0.5);
+
 }
 
-.travel-sidebar-content{
-  overflow-y:scroll !important;
+.travel-sidebar-content {
+  overflow-y: scroll !important;
 }
 
 
@@ -65,7 +66,7 @@
 
 .link:hover {
   display: block;
-  color: #cbaa49;
+  color: #595341;
   text-decoration: none;
   font-weight: bold;
   text-shadow: 2px 2px 4px #000000;

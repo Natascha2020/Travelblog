@@ -11,7 +11,9 @@ const ModalSetup = (props) => {
       <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} size="lg" aria-labelledby="contained-modal-title-vcenter" centered>
         <Modal.Header>
           <Modal.Title id="contained-modal-title-vcenter">
-            <a href={hyperLink} target="_blank" rel="noopener noreferrer">{hyperLinkWord}</a>
+            <a href={hyperLink} target="_blank" rel="noopener noreferrer">
+              {hyperLinkWord}
+            </a>
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
