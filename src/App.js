@@ -35,9 +35,7 @@ const App = () => {
             </main>
 
             <Switch>
-              <Route exact path="/images">
-                <ViewList />
-              </Route>
+              <Route exact path="/Images/:prefiltered?" component={ViewList} />
               <Route exact path="/MyProfile">
                 <MyProfile />
               </Route>
